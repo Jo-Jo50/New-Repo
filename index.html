@@ -3,43 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Valentine's Day Love</title>
+    <title>Valentine's Day Website</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="script.js"></script>
-    <style>
-        body { font-family: Arial, sans-serif; background-color: #fff0f5; }
-        .header { text-align: center; padding: 50px; }
-        .header h1 { color: #ff69b4; font-size: 50px; animation: fadeIn 2s; }
-        .section { margin: 20px; padding: 20px; border: 2px solid pink; border-radius: 10px; }
-        @keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
-    </style>
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="header">
+    <header>
         <h1>Happy Valentine's Day!</h1>
-    </div>
-    <div class="section" id="love-letter">
-        <h2>Write Your Love Letter</h2>
-        <textarea placeholder="Write your love letter here..." style="width: 100%; height: 100px;"></textarea>
-        <button>Send Love Letter</button>
-    </div>
-    <div class="section" id="memory-gallery">
+        <button id="toggleDarkMode">Toggle Dark Mode</button>
+    </header>
+    
+    <section id="loveLetter">
+        <h2>Your Love Letter</h2>
+        <p>Write your love letter here... ❤️</p>
+    </section>
+
+    <section id="memoryGallery">
         <h2>Memory Gallery</h2>
-        <p>Share your memorable moments:</p>
-        <input type="file" accept="image/*" multiple/> <button>Upload Memories</button>
-    </div>
-    <div class="section" id="quiz">
-        <h2>Valentine's Quiz</h2>
-        <p>How well do you know your partner?</p>
-        <button>Start Quiz</button>
-    </div>
-    <div class="section" id="music-player">
+        <div class="gallery">
+            <img src="memory1.jpg" alt="Memory 1">
+            <img src="memory2.jpg" alt="Memory 2">
+        </div>
+    </section>
+
+    <section id="quiz">
+        <h2>Interactive Quiz</h2>
+        <p>How well do you know your partner? Take the quiz!</p>
+        <!-- Quiz content goes here -->
+    </section>
+
+    <section id="musicPlayer">
         <h2>Music Player</h2>
         <audio controls>
-            <source src="your_music_file.mp3" type="audio/mpeg">
+            <source src="romantic-song.mp3" type="audio/mp3">
             Your browser does not support the audio tag.
         </audio>
+    </section>
+
+    <div class="floating-hearts">
+        <!-- Animating Hearts via CSS -->
     </div>
 </body>
 </html>
