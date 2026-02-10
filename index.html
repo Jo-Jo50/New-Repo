@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine's Day Interactive Website</title>
+    <style>
+        body {
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        @media (prefers-color-scheme: light) {
+            body {
+                background-color: white;
+                color: black;
+            }
+        }
+        .header {
+            text-align: center;
+            margin-top: 50px;
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Happy Valentine's Day!</h1>
+        <p>Welcome to our interactive Valentine's Day website!</p>
+        <button class="button" onclick="showLoveLetter()">Read Love Letter</button>
+        <button class="button" onclick="showMemories()">Share Your Memories</button>
+        <button class="button" onclick="takeQuiz()">Take a Quiz</button>
+    </div>
+    <div id="content"></div>
+    <script>
+        function showLoveLetter() {
+            document.getElementById('content').innerHTML = '<h2>A Love Letter</h2><p>My dearest love, on this special day...</p>';
+        }
+        function showMemories() {
+            document.getElementById('content').innerHTML = '<h2>Your Memories</h2><p>Share your cherished moments here...</p>';
+        }
+        function takeQuiz() {
+            document.getElementById('content').innerHTML = '<h2>Quiz</h2><p>What is your love language?</p>';
+        }
+    </script>
+</body>
+</html>
